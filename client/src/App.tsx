@@ -1,9 +1,13 @@
-import { Button } from "@mui/material";
+import { useState } from "react";
+import { ChatsPage, UserProps } from "./app-components/ChatsPage";
+import { AuthPage } from "./app-components/AuthPage";
 
 export const App = () => {
-  return (
-    <>
-      <Button>Aaa</Button>
-    </>
+  const [user, setUser] = useState<UserProps>();
+
+  return !user ? (
+    <AuthPage onAuth={(user) => setUser(user)} />
+  ) : (
+    <ChatsPage user={user} />
   );
 };

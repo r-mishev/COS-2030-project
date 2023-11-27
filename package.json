@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-chat-engine-advanced": "^0.1.28",
+    "react-chat-engine-pretty": "^0.1.8"
+  }
+}
